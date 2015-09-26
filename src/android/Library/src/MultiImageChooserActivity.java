@@ -674,9 +674,9 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
             int index = fileName.lastIndexOf('.');
             String name = fileName.substring(0, index);
             String ext = fileName.substring(index);
-            File file = File.createTempFile(name, ext);
+            File file = File.createTempFile("tville-", null);
             OutputStream outStream = new FileOutputStream(file);
-            if (ext.compareToIgnoreCase(".png") == 0) {
+            if (Files.probeContentType(fileName).compareToIgnoreCase("image/png") == 0) {
                 bmp.compress(Bitmap.CompressFormat.PNG, quality, outStream);
             } else {
                 bmp.compress(Bitmap.CompressFormat.JPEG, quality, outStream);
