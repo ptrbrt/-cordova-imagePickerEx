@@ -672,9 +672,8 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         */
         private File storeImage(Bitmap bmp, String fileName) throws IOException {
             int index = fileName.lastIndexOf('.');
-            String name = fileName.substring(0, index);
-            String ext = fileName.substring(index);
-            File file = File.createTempFile(name, ext);
+            String ext = (index > -1) ?  fileName.substring(index) : ".jpg";
+            File file = File.createTempFile("imagepicker-tmp", ext);
             OutputStream outStream = new FileOutputStream(file);
             if (ext.compareToIgnoreCase(".png") == 0) {
                 bmp.compress(Bitmap.CompressFormat.PNG, quality, outStream);
