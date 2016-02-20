@@ -32,7 +32,6 @@ package com.synconset;
 
 import java.net.URI;
 import java.io.File;
-import java.nio.file.spi.FileTypeDetector;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -673,11 +672,10 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         */
         private File storeImage(Bitmap bmp, String fileName) throws IOException {
             int index = fileName.lastIndexOf('.');
-            String name = fileName.substring(0, index);
-            String ext = fileName.substring(index);
-            File file = File.createTempFile("tville-", null);
+            String ext = (index > -1) ?  fileName.substring(index) : ".jpg";
+            File file = File.createTempFile("imagepicker-tmp", ext);
             OutputStream outStream = new FileOutputStream(file);
-            if (Files.probeContentType(fileName).compareToIgnoreCase("image/png") == 0) {
+            if (ext.compareToIgnoreCase(".png") == 0) {
                 bmp.compress(Bitmap.CompressFormat.PNG, quality, outStream);
             } else {
                 bmp.compress(Bitmap.CompressFormat.JPEG, quality, outStream);
