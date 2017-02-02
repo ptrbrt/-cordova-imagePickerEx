@@ -18,6 +18,7 @@
         android:requiresFadingEdge="vertical"
         android:scrollingCache="true"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="8dip" />
+        android:verticalSpacing="8dip"
+        android:scrollbarStyle="insideInset"/>
 
 </LinearLayout>
