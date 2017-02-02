@@ -19,6 +19,7 @@
         android:scrollingCache="true"
         android:stretchMode="columnWidth"
         android:verticalSpacing="8dip"
-        android:scrollbarStyle="insideInset"/>
+        android:scrollbarStyle="insideInset"
+        android:fadeScrollbars="false"/>
 
 </LinearLayout>
