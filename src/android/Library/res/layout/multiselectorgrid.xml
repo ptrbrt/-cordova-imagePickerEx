@@ -15,10 +15,11 @@
         android:gravity="center"
         android:horizontalSpacing="8dip"
         android:numColumns="3"
-        android:requiresFadingEdge="vertical"
         android:scrollingCache="true"
         android:stretchMode="columnWidth"
         android:verticalSpacing="8dip"
-        android:scrollbarStyle="outsideOverlay"/>
+        android:scrollbarStyle="insideInset"
+        android:fadeScrollbars="false"
+        android:overScrollMode="never"/>
 
 </LinearLayout>
