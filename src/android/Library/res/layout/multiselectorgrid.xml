@@ -15,7 +15,7 @@
         android:gravity="center"
         android:horizontalSpacing="8dip"
         android:numColumns="3"
-        android:fadeScrollbars="false"
+        android:requiresFadingEdge="vertical"
         android:scrollingCache="true"
         android:stretchMode="columnWidth"
         android:verticalSpacing="8dip"
