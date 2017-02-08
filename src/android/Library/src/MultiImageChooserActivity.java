@@ -221,7 +221,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
 
         if (isChecked) {
             fileNames.put(name, new Integer(rotation));
-            if (maxImageCount == 1) {
+            if (maxImageCount <= 1) {
                 this.selectClicked(null);
             } else {
                 maxImages--;
