@@ -235,7 +235,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
             }
         } else {
             fileNames.remove(name);
-            maxImages = (maxImages == 0) ? maxImages :maxImages++;
+            maxImages = (maxImages == 0) ? maxImages : maxImages+1;
             ImageView imageView = (ImageView)view;
             if (android.os.Build.VERSION.SDK_INT>=16) {
                 imageView.setImageAlpha(255);
