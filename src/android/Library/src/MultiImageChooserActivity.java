@@ -207,6 +207,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         boolean isChecked = !isChecked(position);
         if (maxImages == 0 && isChecked) {
             isChecked = false;
+            maxImages--;
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Maximum " + maxImageCount + " Photos");
             builder.setMessage("You can only select " + maxImageCount + " photos at a time.");
@@ -235,7 +236,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
             }
         } else {
             fileNames.remove(name);
-            maxImages = (maxImages == 0) ? maxImages : maxImages+1;
+            maxImages++;
             ImageView imageView = (ImageView)view;
             if (android.os.Build.VERSION.SDK_INT>=16) {
                 imageView.setImageAlpha(255);
