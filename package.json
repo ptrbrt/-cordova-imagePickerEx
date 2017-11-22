@@ -1,8 +1,8 @@
 {
     "version": "1.0.5",
     "name": "com.synconset.imagepickerExt",
-    "cordova_name": "ImagePicker",
     "description": "\n\t\tThis plugin allows selection of multiple images from the camera roll / gallery in a phonegap app\n\t",
+    "cordova_name": "ImagePicker",
     "license": "MIT",
     "platforms": [
         "ios",
